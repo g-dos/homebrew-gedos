@@ -12,7 +12,10 @@ class Gedos < Formula
   depends_on "ffmpeg" => :recommended
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install %w[setuptools wheel rich pyyaml python-dotenv]
+    system libexec/"bin/python", "-m", "pip", "install", "--no-deps", "--no-build-isolation", buildpath
+    bin.install_symlink libexec/"bin/gedos"
   end
 
   def caveats
