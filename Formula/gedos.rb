@@ -1,7 +1,8 @@
 class Gedos < Formula
   desc "Autonomous AI agent for macOS. Your Mac, working while you're not."
   homepage "https://github.com/g-dos/gedos"
-  url "https://github.com/g-dos/gedos/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://github.com/g-dos/gedos/archive/refs/tags/v0.9.11.tar.gz"
+  sha256 "4192fa02027bed5c4aa905e76789c102d9c56d01909c182ec573dc43bff6193e"
   license "Apache-2.0"
   head "https://github.com/g-dos/gedos.git", branch: "main"
 
